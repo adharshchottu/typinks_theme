@@ -11,9 +11,7 @@
     </article>
 
     <!-- Custom JavaScript files set in YAML front matter -->
-    {% for js in page.customjs %}
-        <script type="text/javascript" src='/assets/js/"{{ js }}"'></script>
-    {% endfor %}
+    <script type="text/javascript" src='/assets/js/test.js'></script>
 
     {{ partial "article/next.html" . }}
 </section>
