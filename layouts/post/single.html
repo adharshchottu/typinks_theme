@@ -12,7 +12,7 @@
 
     <!-- Custom JavaScript files set in YAML front matter -->
     {% for js in page.customjs %}
-        <script type="text/javascript" src="{{ "/assets/js/" | prepend: site.baseurl | append: js }}"></script>
+        <script type="text/javascript" src='/assets/js/"{{ js }}"'></script>
     {% endfor %}
 
     {{ partial "article/next.html" . }}
