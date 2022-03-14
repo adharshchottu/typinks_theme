@@ -1,0 +1,18 @@
+
+  {{ $authors := slice }}
+  {{ with .Params.categories  }}
+    {{ range $name := . }}
+      {{ with site.GetPage (printf "/%s/%s" "categories" ($name | urlize)) }}
+        {{ $firstname := "" }}
+        {{ $name := "" }}
+        {{ $avatar := false }}
+        {{ with .Title }}
+          {{ $name = . }}
+          {{ $firstname = index (split . " ") 0 }}
+        {{ end }}
+        {{ $authors = $authors | append (dict "URL" .RelPermalink "name" $name "firstname" $firstname "avatar" $avatar) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  
+  {{ return $authors }}

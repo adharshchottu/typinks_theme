@@ -6,13 +6,14 @@
                 <div class="article-meta">
                     {{ partial "article/authors.html" . }}
                     {{ .Page.Date.Format "January 2, 2006" }}
-                    • {{ .ReadingTime }} min read
+                    • {{ .ReadingTime }} min read 
+                    {{ partial "article/categories.html" . }}
                 </div>
             </div>
         </header>
         {{ with .Page.Params.hero }}
         <div class="article-hero-image" id="ArticleImage__Hero">
-            <img src="{{ . }}">
+            <img src="{{ . }}" width="95vw">
         </div>
         {{ end }}
     </div>

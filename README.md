@@ -121,3 +121,7 @@ It uses [formspree.io](//formspree.io/) as proxy to send the actual email. Each 
 ```
 {{< subscribe email="your@email.com" >}}
 ```
+
+### images size
+
+1200 x 720

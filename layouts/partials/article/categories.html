@@ -1,0 +1,12 @@
+
+{{ $authors := partialCached "func/GetArticleCategories" . .File.UniqueID }}
+{{ if eq (len $authors) 1 }}
+    {{ with $author := index $authors 0 }}
+            <a href="{{ .URL }}" class="article-author-link">
+                {{ with .name }}
+                <span class="hide-on-mobile">&nbsp; • &nbsp;</span><strong>{{ . }}</strong>
+                {{ end }}
+                <span class="hide-on-mobile">&nbsp;</span>
+            </a>
+    {{ end }}
+{{ end }}
