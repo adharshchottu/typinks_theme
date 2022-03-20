@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
     {{ $prism := resources.Get "css/prism.css" }}
     <link rel="stylesheet" href="{{ $prism.RelPermalink }}" />
-    {{ $comments := resources.Get "css/comment.css" }}
-    <link rel="stylesheet" href="{{ $comments.RelPermalink }}" />
+    {{ $custom := resources.Get "css/custom.css" }}
+    <link rel="stylesheet" href="{{ $custom.RelPermalink }}" />
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
     {{ partial "seo/print.html" . }}
     {{ with .Params.forestry_instant_preview_id }}

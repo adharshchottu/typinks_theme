@@ -1,0 +1,14 @@
+{{ if .IsNamedParams }}
+<div class="teambox">
+    <div class="teamBoxAvatar">
+        <img src='{{ .Get "image" }}' />
+    </div>
+    <div class="teamBoxHeadingSection">
+        <h1 class="teamBoxHeading">{{ .Get "name" }}</h1>
+        <p class="teamBoxSubheading">{{ .Get "role" }}</p>
+    </div>
+    <div class="teamBoxDescription">
+        {{ .Get "description" }}
+    </div>
+</div>
+{{ end }}
