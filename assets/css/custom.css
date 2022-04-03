@@ -120,3 +120,21 @@
 #logo-mobile>svg>g {
     fill: var(--primary);
 }
+
+p > img{
+    max-width: 680px;
+}
+/*DESKTOP*/
+@media screen and (max-width: 1070px){
+    p > img{
+        max-width: 507px;
+    }
+}
+
+/*TABLET*/
+@media screen and (max-width: 735px){
+    p > img{
+        max-width: 486px;
+        margin: 0 auto 25px;
+    }
+}
