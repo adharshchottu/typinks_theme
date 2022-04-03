@@ -64,6 +64,12 @@
     margin: 30 0 0 0;
 }
 
+.typinks_footer {
+    border-top-style: double;
+    border-width: 2px;
+    padding-top: 25px;
+}
+
 
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 
