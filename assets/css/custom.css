@@ -134,7 +134,12 @@ p > img{
 /*TABLET*/
 @media screen and (max-width: 735px){
     p > img{
-        max-width: 486px;
+        max-width: 85vw;
         margin: 0 auto 25px;
     }
+}
+
+/* PAGINATION */
+.pagination-class{
+    overflow: scroll;
 }
