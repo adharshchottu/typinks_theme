@@ -1,7 +1,7 @@
 {{ if .IsNamedParams }}
 <div class="teambox">
     <div class="teamBoxAvatar">
-        <img src='{{ .Get "image" }}' alt='{{ .Get "alt" }}' />
+        <img src='{{ .Get "image" | absURL  }}' alt='{{ .Get "alt" }}' />
     </div>
     <div class="teamBoxHeadingSection">
         <h1 class="teamBoxHeading">{{ .Get "name" }}</h1>

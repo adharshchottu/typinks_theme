@@ -15,5 +15,5 @@
 </section>
 
 {{ $script := resources.Get "js/progressBar.js" }}
- <script src="{{ $script.RelPermalink }}"></script>
+ <script src="{{ $script.RelPermalink  | absURL }}"></script>
 {{ end }}

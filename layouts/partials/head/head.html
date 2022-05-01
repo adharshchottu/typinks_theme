@@ -2,13 +2,13 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="/images/favicon.jpg">
+    <link rel="icon" href="https://www.typinks.com/images/favicon.jpg">
     {{ $style := resources.Get "scss/global.scss" | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    <link rel="stylesheet" href="{{ $style.RelPermalink | absURL }}">
     {{ $prism := resources.Get "css/prism.css" }}
-    <link rel="stylesheet" href="{{ $prism.RelPermalink }}" />
+    <link rel="stylesheet" href="{{ $prism.RelPermalink  | absURL }}" />
     {{ $custom := resources.Get "css/custom.css" }}
-    <link rel="stylesheet" href="{{ $custom.RelPermalink }}" />
+    <link rel="stylesheet" href="{{ $custom.RelPermalink  | absURL }}" />
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
     {{ partial "seo/print.html" . }}
     {{ with .Params.forestry_instant_preview_id }}

@@ -7,10 +7,10 @@
         {{ $scratch.Set "numPages" (len $paginator.Pages) }}
         {{ range $index, $article := $paginator.Pages }}
           {{ $counter := mod $index 2 }}
-            <a href="{{ .RelPermalink }}" class="article-link">
+            <a href="{{ .RelPermalink | absURL }}" class="article-link">
               <div class="article-data-outer">
                 <div class="image-container">
-                  <img src="{{ .Params.hero }}" class="article-image" />
+                  <img src="{{ .Params.hero | absURL  }}" class="article-image" />
                 </div>
                 <div class="article-data">
                   <h2 class="article-title">
@@ -26,7 +26,7 @@
               </div>
             </a>
             {{ if eq ($scratch.Get "numPages") (add $index 1) }}
-              <a href="{{ .RelPermalink }}" style="opacity: 0;" class="article-link">
+              <a href="{{ .RelPermalink | absURL  }}" style="opacity: 0;" class="article-link">
               </a>
             {{ end }}
         {{ end }}
@@ -36,4 +36,4 @@
 </section>
 
 {{ $script := resources.Get "js/toggleBorder.js" }}
-<script src="{{ $script.RelPermalink }}"></script>
+<script src="{{ $script.RelPermalink | absURL }}"></script>

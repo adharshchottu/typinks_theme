@@ -4,8 +4,8 @@
 
 <body class="line-numbers">
 
-    {{ $script := resources.Get "js/initColors.js" }}
-    <script src="{{ $script.RelPermalink }}"></script>
+    {{ $script := resources.Get "js/initColors.js"}}
+    <script src="{{ $script.RelPermalink | absURL }}"></script>
 
     <div class="layout-styled">
 
@@ -20,7 +20,7 @@
     </div>
 
     {{ $script := resources.Get "js/prism.js" }}
-    <script src="{{ $script.RelPermalink }}"></script>
+    <script src="{{ $script.RelPermalink | absURL }}"></script>
     <script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6952461738823588" crossorigin="anonymous" type="text/javascript"></script>
 </body>
 

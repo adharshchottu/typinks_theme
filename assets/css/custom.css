@@ -143,3 +143,7 @@ p > img{
 .pagination-class{
     overflow: scroll;
 }
+
+li{
+    overflow: auto;
+}
