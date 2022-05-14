@@ -141,9 +141,9 @@ p > img{
 
 /* PAGINATION */
 .pagination-class{
-    overflow: scroll;
+    overflow-x: auto;
 }
 
-li{
+li:not(.page-item){
     overflow: auto;
 }
