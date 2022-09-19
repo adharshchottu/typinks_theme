@@ -1,149 +1,44 @@
-.teambox {
-    color: var(--articleText);
-    border-style: solid;
-    border-width: 1px;
-    border-color: var(--articleText);
-    display: flex;
-    flex-direction: row;
-    width: 550px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-    padding: 15;
-}
-
-.teamBoxDescription {
-    display: flex;
-    text-align: center;
-}
-
-.teamBoxHeading {
-    font-size: 38px;
-    font-family: var(--sanserif);
-    color: var(--primary);
-    margin-bottom: 0px;
-    font-weight: 600;
-    text-align: center
-}
-
-.teamBoxAvatar {
-    position: relative;
-    z-index: 1;
-    height: 164px;
-    width: 164px;
-    margin: 10px 10px 35px 10px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid var(background-color);
-    -webkit-box-shadow: 0 15.619px 31.2381px rgba(0, 0, 0, .15);
-    box-shadow: 0 15.619px 31.2381px rgba(0, 0, 0, .15);
-    border: 2px solid var(--card)
-}
-
-.teamBoxSubheading {
-    margin: 0 auto 10 auto;
-    max-width: 450px;
-    color: var(--grey);
-    font-size: 18px;
-    font-family: var(--sanserif);
-    line-height: 1.4;
-    text-align: left;
-    padding-left: 5;
-}
-
-.teamBoxAvatar img {
-    width: 100%
-}
-
-.teamGrid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.teamBoxHeadingSection {
-    margin: 30 0 0 0;
-}
-
 .typinks_footer {
-    border-top-style: double;
-    border-width: 2px;
-    padding-top: 25px;
+  border-top-style: double;
+  border-width: 2px;
+  padding-top: 25px;
 }
-
-
-/* Responsive layout - makes a one column layout instead of a two-column layout */
-
-@media (max-width: 800px) {
-    .teambox {
-        flex-direction: column;
-        border-width: 1px;
-        margin: 15 auto;
-        padding: 10;
-    }
-}
-
-@media screen and (max-width:735px) {
-    .teamBoxAvatar {
-        width: 146px;
-        height: 146px
-    }
-}
-
-@media screen and (max-width:540px) {
-    .teamBoxAvatar {
-        width: 136px;
-        height: 136px;
-        margin-bottom: 0;
-        margin-top: 5px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .teamBoxHeading {
-        margin-top: 0;
-    }
-    .teamBoxHeadingSection {
-        margin: 15 0 0 0;
-    }
-    .teamBoxSubheading {
-        font-size: 14px;
-        text-align: center;
-    }
-    .post-content {
-        padding: 10px 0 35px;
-    }
-}
-
 
 /* logo */
 
-#logo-desktop>svg>g,
-#logo-mobile>svg>g {
-    fill: var(--primary);
+#logo-desktop > svg > g,
+#logo-mobile > svg > g {
+  fill: var(--primary);
 }
 
-p > img{
-    max-width: 680px;
+p > img {
+  max-width: 680px;
 }
 /*DESKTOP*/
-@media screen and (max-width: 1070px){
-    p > img{
-        max-width: 507px;
-    }
+@media screen and (max-width: 1070px) {
+  p > img {
+    max-width: 507px;
+  }
 }
 
 /*TABLET*/
-@media screen and (max-width: 735px){
-    p > img{
-        max-width: 85vw;
-        margin: 0 auto 25px;
-    }
+@media screen and (max-width: 735px) {
+  p > img {
+    max-width: 85vw;
+    margin: 0 auto 25px;
+  }
 }
 
 /* PAGINATION */
-.pagination-class{
-    overflow-x: auto;
+.pagination-class {
+  overflow-x: auto;
 }
 
-li:not(.page-item){
-    overflow: auto;
+li:not(.page-item) {
+  overflow: auto;
+}
+
+::selection {
+  background: var(--primary);
+  color: rgb(5, 165, 85);
 }
