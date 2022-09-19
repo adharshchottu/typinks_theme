@@ -56,3 +56,12 @@ function makeLight(){
     be.style.setProperty('--inputBackground', "");
     be.style.setProperty('--tooltip', "lightgrey");
 }
+
+['https://fonts.googleapis.com/css?family=Merriweather&display=swap'].forEach(function (f) {
+  const gf = document.createElement('link')
+  gf.rel = 'stylesheet'
+  gf.href = f
+  gf.type = 'text/css'
+  const gd = document.getElementsByTagName('link')[0]
+  gd.parentNode.insertBefore(gf, gd)
+})
