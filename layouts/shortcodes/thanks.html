@@ -1,0 +1,10 @@
+{{ if .IsNamedParams }}
+<div class="thanksBox">
+    <div class="thanksBoxAvatar">
+        <img data-lazy='{{ .Get "image" | absURL  }}' alt='{{ .Get "alt" }}' />
+    </div>
+    <div class="thanksBoxDescription">
+        <a href='{{.Get "link"}}'>{{ .Get "description" }}</a>
+    </div>
+</div>
+{{ end }}
