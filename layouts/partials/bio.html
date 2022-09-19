@@ -2,11 +2,11 @@
         {{ range site.Taxonomies.authors }}
             {{ with .Page }}
                 {{ if .Params.featured }}
-                    <a href="{{ .RelPermalink | absURL  }}" class="bio-link">
+                    <a href="{{ .RelPermalink | absURL  }}" class="bio-link" aria-label="author bio">
                         {{ with .Params.avatar }}
                             <div class="bio-avatar">
                                 <div class="bio-avatar-inner">
-                                    <img class="author-avatar" src="{{ .  | absURL }}" />
+                                    <img class="author-avatar" src="{{ .  | absURL }}" alt="author image"/>
                                 </div>
                             </div>
                         {{ end }}

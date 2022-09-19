@@ -15,5 +15,5 @@
     </div>
 </Section>
 
-{{ $script := resources.Get "js/toggleLayout.js" }}
-<script src="{{ $script.RelPermalink | absURL  }}"></script>
+{{ $script := resources.Get "js/toggleLayout.js" | minify }}
+<script defer src="{{ $script.RelPermalink | absURL  }}"></script>

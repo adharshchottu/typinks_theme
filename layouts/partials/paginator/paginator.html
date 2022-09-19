@@ -3,18 +3,18 @@
 <nav aria-label="Page navigation" class="pagination-class">
     <ul class="pagination">
         {{ if $pag.HasPrev }}
-        <li class="page-item"><a href="{{ $pag.Prev.URL | absURL  }}" rel="prev" class="page-link page-prev">Prev</a></li>
+        <li class="page-item"><a href="{{ $pag.Prev.URL | absURL  }}" rel="prev" class="page-link page-prev" aria-label="previous page">Prev</a></li>
         {{ end }}
         {{ range $pag.Pagers }}
         {{ if eq . $pag }}
-        <li class="page-item active"><a href="{{ .URL  | absURL }}" class="page-link">{{ .PageNumber }}</a></li>
+        <li class="page-item active"><a href="{{ .URL  | absURL }}" class="page-link" aria-label="current page">{{ .PageNumber }}</a></li>
         {{ else }}
-        <li class="page-item"><a href="{{ .URL | absURL  }}" class="page-link">{{ .PageNumber }}</a></li>
+        <li class="page-item"><a href="{{ .URL | absURL  }}" class="page-link" aria-label="page number">{{ .PageNumber }}</a></li>
         {{ end }}
         {{ end }}
 
         {{ if $pag.HasNext }}
-        <li class="page-item"><a href="{{ $pag.Next.URL | absURL  }}" rel="next" class="page-link page-next">Next</a></li>
+        <li class="page-item"><a href="{{ $pag.Next.URL | absURL  }}" rel="next" class="page-link page-next" aria-label="next page">Next</a></li>
         {{ end }}
     </ul>
 </nav>

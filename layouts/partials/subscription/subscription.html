@@ -35,5 +35,5 @@
     </div>
 </section>
 
-{{ $script := resources.Get "js/addFormStyles.js" }}
-<script src="{{ $script.RelPermalink }}"></script>
+{{ $script := resources.Get "js/addFormStyles.js" | minify}}
+<script defer src="{{ $script.RelPermalink }}"></script>

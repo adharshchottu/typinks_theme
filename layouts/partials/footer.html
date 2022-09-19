@@ -1,10 +1,36 @@
 <div class="footer-gradient"></div>
-    <div class="section narrow">
-      <div class="footer-hr"></div>
-      <div class="footer-container">
-        <div class="footer-text">
-          © we are online all the years ~ {{ .Site.Title }} blog hosted on <b>IPFS</b>  with <b><a href="https://fleek.co/">fleek</a></b>
-        </div>
-        {{ partial "social-links/social-links.html" . }}
+<div class="section narrow">
+  <div class="footer-hr"></div>
+  <div class="footer-container">
+    <div class="footer-text">
+      © we are online all the years ~ {{ .Site.Title }} blog hosted on <b>IPFS</b> with <b><a
+          href="https://fleek.co/" aria-label="fleek">fleek</a></b>
     </div>
+    {{ partial "social-links/social-links.html" . }}
+  </div>
 </div>
+<script language="javascript" type="text/javascript">
+  const targets = document.querySelectorAll('img');
+
+  const lazyLoad = target => {
+    const io = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          const src = img.getAttribute('data-lazy');
+          console.log(src)
+
+          src && img.setAttribute('src', src);
+          img.classList.add('fade');
+
+          observer.disconnect();
+        }
+      });
+    });
+
+    io.observe(target)
+  };
+
+  targets.forEach(lazyLoad);
+</script>

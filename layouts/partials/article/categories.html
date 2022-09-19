@@ -2,7 +2,7 @@
 {{ $authors := partialCached "func/GetArticleCategories" . .File.UniqueID }}
 {{ if eq (len $authors) 1 }}
     {{ with $author := index $authors 0 }}
-            <a href="{{ .URL | absURL  }}" class="article-author-link">
+            <a href="{{ .URL | absURL  }}" class="article-author-link" aria-label="author">
                 {{ with .name }}
                 <span class="hide-on-mobile">&nbsp; • &nbsp;</span><strong>{{ . }}</strong>
                 {{ end }}

@@ -9,7 +9,7 @@
             {{ if not $counter }}
                 <div class="post-row">
             {{ end }}
-            <a href="{{ $article.RelPermalink | absURL  }}" class="article-link"
+            <a href="{{ $article.RelPermalink | absURL  }}" class="article-link" aria-label="article"
             {{ if and (eq ($biggerFirst) true) (eq ($biggerPlaced) false) }}
               {{ if eq $counter 0 }}
                 id="article-link-bigger"
@@ -23,7 +23,7 @@
             {{ end }}>
               <div class="article-data-outer">
                 <div class="image-container">
-                  <img src="{{ $article.Params.hero | absURL  }}" class="article-image" />
+                  <img data-lazy="{{ $article.Params.hero | absURL  }}" class="article-image"  alt="{{ $article.Params.title }}"/>
                 </div>
                 <div class="article-data">
                   <h2 class="article-title">

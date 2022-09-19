@@ -13,7 +13,7 @@
         </header>
         {{ with .Page.Params.hero }}
         <div class="article-hero-image" id="ArticleImage__Hero">
-            <img src="{{ .  | absURL }}" width="95vw">
+            <img data-lazy="{{ .  | absURL }}" width="95vw" alt='{{ replace  . "/images/" "" }}' >
         </div>
         {{ end }}
     </div>

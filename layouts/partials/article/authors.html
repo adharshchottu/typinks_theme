@@ -2,10 +2,10 @@
 {{ $authors := partialCached "func/GetArticleAuthors" . .File.UniqueID }}
 {{ if eq (len $authors) 1 }}
     {{ with $author := index $authors 0 }}
-            <a href="{{ .URL | absURL  }}" class="article-author-link">
+            <a href="{{ .URL | absURL  }}" class="article-author-link" aria-label="author">
                 {{ with .avatar }}
                     <div class="article-author-avatar">
-                        <img src="{{ .  | absURL }}" />
+                        <img data-lazy="{{ .  | absURL }}"  alt="author image"/>
                     </div>
                 {{ end }}
                 {{ with .name }}
@@ -22,7 +22,7 @@
                 {{ range $index, $author := $authors }}
                     {{ with .avatar }}
                         <div class="article-coauthors-avatar" style="left: {{ mul $index 15 }}px;">
-                            <img src="{{ . | absURL  }}" />
+                            <img data-lazy="{{ . | absURL  }}"  alt="author image"/>
                         </div>
                     {{ end }}
                 {{ end }}
@@ -43,10 +43,10 @@
             </div>
             {{ range $index, $author := $authors }}
                 <li class="article-coauthors-list-item-open">
-                    <a href="{{ .URL  | absURL }}" class="article-author-link">
+                    <a href="{{ .URL  | absURL }}" class="article-author-link" aria-label="author">
                         {{ with $author.avatar }}
                             <div class="article-coauthor-avatar-open">
-                                <img src="{{ .  | absURL }}" />
+                                <img data-lazy="{{ .  | absURL }}"  alt="author image"/>
                             </div>
                         {{ end }}
                         <strong class="article-author-name-open">{{ .name }}</strong>
@@ -57,5 +57,5 @@
     </div>
 {{ end }}
 
-{{ $script := resources.Get "js/collapseAuthors.js" }}
-<script src="{{ $script.RelPermalink | absURL  }}"></script>
+{{ $script := resources.Get "js/collapseAuthors.js"| minify }}
+<script defer src="{{ $script.RelPermalink | absURL  }}"></script>
