@@ -19,7 +19,6 @@
         if (entry.isIntersecting) {
           const img = entry.target;
           const src = img.getAttribute('data-lazy');
-          console.log(src)
 
           src && img.setAttribute('src', src);
           img.classList.add('fade');
