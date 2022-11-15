@@ -10,9 +10,13 @@
             align-items: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between;
+            justify-content: space-around;
     padding-bottom: 80px;
     color: var(--grey);
+
+    a{
+        text-decoration: none;
+    }
 }
 
 /*TABLET*/
@@ -47,6 +51,9 @@
     .footer-text{
         margin-bottom: 80px;
     }
+    .footer-other-links{
+        margin-bottom: 80px;
+    }
 }
 
 /*PHABLET*/
@@ -55,7 +62,10 @@
         display: none;
     }
     .footer-text{
-        margin: 120px auto 100px;
+        margin: 120px auto 50px;
+    }
+    .footer-other-links{
+        margin: 0px auto 50px;
     }
 }
 
