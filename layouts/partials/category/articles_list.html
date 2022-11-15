@@ -10,18 +10,19 @@
             <a href="{{ .RelPermalink | absURL }}" class="article-link" aria-label="article">
               <div class="article-data-outer">
                 <div class="image-container">
-                  <img data-lazy="{{ .Params.hero | absURL  }}" class="article-image" alt="{{ .Params.title }}"/>
+                  {{$default := "/images/typinks_logo.webp"}}
+                  <img data-lazy="{{ or .Params.hero $default  }}" class="article-image" alt="{{ .Params.title }}"/>
                 </div>
                 <div class="article-data">
                   <h2 class="article-title">
                     {{ .Params.title }}
                   </h2>
-                  <p class="article-excerpt">
+                  <!-- <p class="article-excerpt">
                     {{ .Params.excerpt }}
                   </p>
                   <div class="article-metadata">
                     {{ .Date.Format "January 2, 2006" }} • {{ .ReadingTime }} min read
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </a>
