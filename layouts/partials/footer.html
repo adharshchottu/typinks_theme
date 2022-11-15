@@ -3,8 +3,13 @@
   <div class="footer-hr"></div>
   <div class="footer-container">
     <div class="footer-text">
-      © we are online all the years ~ {{ .Site.Title }} blog hosted on <b>IPFS</b> with <b><a
-          href="https://fleek.co/" aria-label="fleek">fleek</a></b>
+      © we are online all the years ~ {{ .Site.Title }} blog hosted on <b>IPFS</b> with <b><a href="https://fleek.co/"
+          aria-label="fleek">fleek</a></b>
+    </div>
+    <div class="footer-other-links">
+      <b><a href="https://www.typinks.com/about/" aria-label="about us page">About us</a></b>
+      |
+      <b><a href="https://www.typinks.com/thank-you/" aria-label="thanks page">Thanks</a></b>
     </div>
     {{ partial "social-links/social-links.html" . }}
   </div>
@@ -19,7 +24,6 @@
         if (entry.isIntersecting) {
           const img = entry.target;
           const src = img.getAttribute('data-lazy');
-
           src && img.setAttribute('src', src);
           img.classList.add('fade');
 
