@@ -47,46 +47,99 @@
 .article-header{
     position: relative;
     z-index: 10;
-    margin:100px auto 120px;
-    padding-left: 68px;
-    max-width: 860px;
-  
-    @media screen and (max-width: $desktop){
-        padding-left: 53px;
-        max-width: calc(507px + 53px);
-        margin: 100px auto 70px;
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-bottom: 4rem;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    max-width: clamp(50rem,75rem,150rem);
+
+    @media screen and (max-width: $phone_small){
+        /* 320px*/
+        margin-top: 0;
+        margin-bottom: 4rem;
+    }
+    
+    @media screen and (min-width: $phone_small) and (max-width: $phone){
+        /* 376px*/
+        margin-top: 0;
+        margin-bottom: 4rem;
+    }
+    
+    @media screen and (min-width: $phone) and (max-width: $phablet){
+        /* 540px*/
+        margin-top: 0;
+        margin-bottom: 4rem;
+    }
+    
+    @media screen and (min-width: $phablet) and (max-width: $tablet){
+        /* 735px*/
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    }
+    
+    @media screen and (min-width: $tablet) and (max-width: $desktop){
+        /* 1070px*/
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+    }
+    
+    @media screen and (min-width: $desktop) and (max-width: $desktop_medium){
+        /* 1280px*/
+        margin-top: 5rem;
+        margin-bottom: 5rem;
     }
 
-    @media screen and (max-width: $tablet){
-        padding-left: 0;
-        margin: 100px auto 70px;
-        max-width: 480px;
-    }
-
-    @media screen and (max-width: $phablet){
-        margin: 170px auto 180px;
-        padding: 0 40px;
-    }
-  
-    @media screen and (max-height: 700px) {
-      margin: 100px auto;
+    @media screen and (min-width: $desktop_medium) and (max-width: $desktop_large){
+        /* 1440px*/
+        margin-top: 6rem;
+        margin-bottom: 6rem;
     }
 }
 
 .article-hero-heading{
-    font-size: 48px;
+    font-size: 5rem;
     font-family: var(--serif);
     margin-bottom: 25px;
     font-weight: bold;
     line-height: 1.32;
   
-    @media screen and (max-width: $tablet){
-        margin-bottom: 20px;
-        font-size: 36px;
+    @media screen and (max-width: $phone_small){
+        /* 320px*/
+            font-size: 3.5rem;
+    }
+    
+    @media screen and (min-width: $phone_small) and (max-width: $phone){
+        /* 376px*/
+            font-size: 4rem;
+    }
+    
+    @media screen and (min-width: $phone) and (max-width: $phablet){
+        /* 540px*/
+            font-size: 4rem;
+    }
+    
+    @media screen and (min-width: $phablet) and (max-width: $tablet){
+        /* 735px*/
+            font-size: 5rem;
+    }
+    
+    @media screen and (min-width: $tablet) and (max-width: $desktop){
+        /* 1070px*/
+            font-size: 6rem;
+    }
+    
+    @media screen and (min-width: $desktop) and (max-width: $desktop_medium){
+        /* 1280px*/
+            font-size: 8rem;
     }
 
-    @media screen and (max-width: $phablet){
-        font-size: 32px;
+    @media screen and (min-width: $desktop_medium) and (max-width: $desktop_large){
+        /* 1440px*/
+            font-size: 8rem;
     }
 }
 
@@ -139,9 +192,10 @@
     position: absolute;
     z-index: 1;
     width: 100%;
-    max-width: 944px;
+    // max-width: 100rem;
+    max-width: clamp(106rem,75rem,150rem);
     overflow: hidden;
-    margin: 0 auto;
+    margin: 0 0;
     -webkit-box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.2),
       0 18px 36px -18px rgba(0, 0, 0, 0.22);
             box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.2),
@@ -449,7 +503,43 @@
 /**************************************ARTICLE BODY**************************************/
 
 .post-content{
-    padding: 160px 0 35px;
+    padding: 0;
+    margin-top: 25rem;
+
+    @media screen and (max-width: $phone_small){
+        /* 320px*/
+            margin-top: 2rem;
+    }
+    
+    @media screen and (min-width: $phone_small) and (max-width: $phone){
+        /* 376px*/
+            margin-top: 2rem;
+    }
+    
+    @media screen and (min-width: $phone) and (max-width: $phablet){
+        /* 540px*/
+            margin-top: 2rem;
+    }
+    
+    @media screen and (min-width: $phablet) and (max-width: $tablet){
+        /* 735px*/
+            margin-top: 4rem;
+    }
+    
+    @media screen and (min-width: $tablet) and (max-width: $desktop){
+        /* 1070px*/
+            margin-top: 5rem;
+    }
+    
+    @media screen and (min-width: $desktop) and (max-width: $desktop_medium){
+        /* 1280px*/
+            margin-top: 5rem;
+    }
+
+    @media screen and (min-width: $desktop_medium) and (max-width: $desktop_large){
+        /* 1440px*/
+            margin-top: 25rem;
+    }
 }
 
 /**************************************ARTICLE NEXT**************************************/
