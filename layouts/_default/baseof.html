@@ -4,24 +4,42 @@
 
 <body class="line-numbers">
 
-    {{ $script := resources.Get "js/initColors.js" | minify}}
-    <script defer src="{{ $script.RelPermalink | absURL }}"></script>
+  {{ $script := resources.Get "js/initColors.js" | minify}}
+  <script defer src="{{ $script.RelPermalink | absURL }}"></script>
 
-    <div class="layout-styled">
+  <div class="layout-styled">
 
-        {{ partial "header.html" . }}
+    {{ partial "header.html" . }}
 
-        {{ block "main" . }}
-        
-        {{ end }}
-        
-        {{ partial "footer.html" . }}
+    {{ block "main" . }}
 
-    </div>
+    {{ end }}
 
-    {{ $script := resources.Get "js/prism.js" | minify }}
-    <script defer src="{{ $script.RelPermalink | absURL }}"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6958244450331063" crossorigin="anonymous" type="text/javascript"></script>
+    {{ partial "footer.html" . }}
+
+  </div>
+
+  {{ $script := resources.Get "js/prism.js" | minify }}
+  <script defer src="{{ $script.RelPermalink | absURL }}"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6958244450331063"
+    crossorigin="anonymous" type="text/javascript"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
+    const firebaseConfig = {
+      apiKey: "AIzaSyAtMbZqZ91UPZQko3XJWBDqUkfqEMQchic",
+      authDomain: "typinks-blog.firebaseapp.com",
+      projectId: "typinks-blog",
+      storageBucket: "typinks-blog.appspot.com",
+      messagingSenderId: "995385455130",
+      appId: "1:995385455130:web:6808c9f46443f660c517a3",
+      measurementId: "G-75S6FDY43G"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 </body>
 
 </html>
