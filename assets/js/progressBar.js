@@ -1,41 +1,37 @@
 window.addEventListener("scroll", updateProgress);
-    
+
 progressBar = document.getElementById("progressBar");
 scrollProgress = document.getElementById("progressIndicator");
 
-if (document.getElementById("subscriptionSection")){
-    articleSubscription = document.getElementById("subscriptionSection").offsetHeight;
-}
-else{
-    articleSubscription = 0;
-}
 
-if(document.getElementById("articleNext")){
+articleSubscription = 0;
+
+if (document.getElementById("articleNext")) {
     articleNext = document.getElementById("articleNext").offsetHeight;
 }
-else{
+else {
     articleNext = 0;
 }
 
 footerSection = 150;
 
-bottomOffset = ((articleSubscription + articleNext + footerSection + 250) / document.body.scrollHeight) * 100 ;
+bottomOffset = ((articleSubscription + articleNext + footerSection + 250) / document.body.scrollHeight) * 100;
 bottomOffset += bottomOffset * 1.1;
 
 
-function updateProgress(){
+function updateProgress() {
     let percentScrolled = (window.pageYOffset / document.body.scrollHeight) * (100 + bottomOffset);
     scrollProgress.style.transform = "translateY(" + percentScrolled + "%)";
 
-    if (percentScrolled > 100){
+    if (percentScrolled > 100) {
         progressBar.style.animationName = "progress-fade-out";
-        setTimeout(function(){
+        setTimeout(function () {
             progressBar.style.opacity = "0";
         }, 500);
     }
-    else{
+    else {
         progressBar.style.animationName = "progress-fade-in";
-        setTimeout(function(){
+        setTimeout(function () {
             progressBar.style.opacity = "1";
         }, 500);
     }
