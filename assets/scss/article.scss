@@ -36,11 +36,13 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    font-size: 1.6rem;
 
     /*PHABLET*/
     @media screen and (max-width: $phablet){
         margin-left: 0;
         flex-direction: column;
+        row-gap: 0.8rem;
     }
 }
 
@@ -248,6 +250,7 @@
       -webkit-transition: var(--color-mode-transition);
       -o-transition: var(--color-mode-transition);
       transition: var(--color-mode-transition);
+      font-size:1.4rem;
     }
   
     &:hover strong {
