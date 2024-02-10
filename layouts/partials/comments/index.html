@@ -1,3 +1,0 @@
-<!-- Custom JavaScript files set in YAML front matter -->
-{{ $customscript := resources.Get "js/custom.js" | minify }}
-<script defer src="{{ $customscript.RelPermalink | absURL  }}"></script>

@@ -5,10 +5,6 @@
   <link rel="icon" href="https://www.typinks.com/images/favicon.jpg">
   {{ $style := resources.Get "scss/global.scss" | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink | absURL }}">
-  {{ $prism := resources.Get "css/prism.css" | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $prism.RelPermalink  | absURL }}" />
-  {{ $custom := resources.Get "css/custom.css" | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $custom.RelPermalink  | absURL }}" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   {{ partial "seo/print.html" . }}
   <style>
